@@ -1,26 +1,29 @@
+// src/App.js
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Utama from './Components/utama';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {Link} from 'react-router-dom';
+
+class App extends React.Component {
+  render(){
+    return(
+      <div align="center"> <hr />
+        <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top" align="right">
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="menu">
+			      <ul className="navbar-nav" align="center">
+              <li className="nav-item"><a href="beranda" className="nav-link">Beranda</a></li>
+              <li className="nav-item"><a href="data" className="nav-link">Data</a></li>
+              <li className="nav-item"><a href="protokol" className="nav-link">Protokol</a></li>
+            </ul>
+      		</div>
+        </nav> <hr />
+        <p><Utama /></p>
+      </div>
+    );
+  }
 }
-
 export default App;
